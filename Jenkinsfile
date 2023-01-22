@@ -28,7 +28,7 @@ pipeline {
 		}}
 	
             
-           stage("Cucumber Report"){
+           stage('Cucumber Report'){
 		steps{
 			// Get some code from a GitHub repository
     		checkout([$class: 'GitSCM',
