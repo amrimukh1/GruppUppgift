@@ -46,7 +46,7 @@ pipeline {
 		fileIncludePattern: '**/*.json',
                jsonReportDirectory: 'target/JSONReports'}}
       
-	    echo 'I am in Reporting stage'
+	   
 }
 
  }   
