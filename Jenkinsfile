@@ -11,7 +11,7 @@ pipeline {
         	steps {
 		// Get some code from a GitHub repository
     	checkout([$class: 'GitSCM',
-        branches: [[name: '*/main']],
+        branches: [[name: '*/master']],
         extensions: [[$class: 'CloneOption', timeout: 120]],
         gitTool: 'Default', 
         userRemoteConfigs: [[url: 'https://github.com/amrimukh1/CucumberDemo']]
@@ -32,13 +32,13 @@ pipeline {
 		steps{
 			// Get some code from a GitHub repository
     		checkout([$class: 'GitSCM',
-        	branches: [[name: '*/main']],
+        	branches: [[name: '*/master']],
         	extensions: [[$class: 'CloneOption', timeout: 120]],
         	gitTool: 'Default', 
         	userRemoteConfigs: [[url: 'https://github.com/amrimukh1/CucumberDemo']]
 			 ]) 
 		cucumber buildStatus: "UNSTABLE",
-		fileIncludePattern: "**/report.json",
+		fileIncludePattern: "**/*.json",
                 jsonReportDirectory: 'target/JSONReports'}}
 
 }
