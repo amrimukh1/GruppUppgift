@@ -26,15 +26,15 @@ pipeline {
 		
 		
         withMaven {
-      	bat "mvn clean verify"  
+      	sh "mvn clean verify"  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
     
     echo 'I am in Build'
 		}}
 	
             
-    //       stage('Cucumber Report'){
-	//	steps{
+          stage('Cucumber Report'){
+		steps{
 	//		// Get some code from a GitHub repository
     //		checkout([$class: 'GitSCM',
     //    	branches: [[name: '*/master']],
@@ -42,9 +42,9 @@ pipeline {
         	gitTool: 'Default', 
         	userRemoteConfigs: [[url: 'https://github.com/amrimukh1/CucumberDemo']]
 			 ]) */
-	//	cucumber buildStatus: 'UNSTABLE',
-	//	fileIncludePattern: '**/*.json',
-     //           jsonReportDirectory: 'target/JSONReports'}}
+		cucumber buildStatus: 'UNSTABLE',
+		fileIncludePattern: '**/*.json',
+               jsonReportDirectory: 'target/JSONReports'}}
 
 }
 
