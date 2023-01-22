@@ -26,7 +26,7 @@ pipeline {
 		
 		
         withMaven {
-      	sh "mvn clean verify"  
+      	bat "mvn clean verify"  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
     
     echo 'I am in Build'
