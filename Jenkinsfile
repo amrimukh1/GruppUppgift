@@ -37,8 +37,8 @@ pipeline {
         	gitTool: 'Default', 
         	userRemoteConfigs: [[url: 'https://github.com/amrimukh1/CucumberDemo']]
 			 ]) 
-		cucumber buildStatus: "UNSTABLE",
-		fileIncludePattern: "**/*.json",
+		cucumber buildStatus: 'UNSTABLE',
+		fileIncludePattern: '**/*.json',
                 jsonReportDirectory: 'target/JSONReports'}}
 
 }
