@@ -17,6 +17,7 @@ pipeline {
         userRemoteConfigs: [[url: 'https://github.com/amrimukh1/CucumberDemo']]
     ])
            	checkout scm
+           	echo 'I am in Checkout code'
         }
     }
 		
@@ -25,6 +26,8 @@ pipeline {
         withMaven {
       	bat "mvn clean verify"
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+    
+    echo 'I am in Build'
 		}}
 	
             
