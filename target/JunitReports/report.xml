@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="31.698" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="To test checkout functionality" name="To check whether user is able to checkout" time="23.424">
+<system-out><![CDATA[
+Given User is logged in.....................................................passed
+When user adds item to the cart.............................................passed
+And user clicks the cart....................................................passed
+And user clicks on checkout.................................................passed
+And User enters first name last name and zip code...........................passed
+And user clicks on continue.................................................passed
+And user clicks on finish...................................................passed
+Then User validates order page..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To test login functionality" name="Check login is sucessful using the valid credentials" time="7.907">
+<system-out><![CDATA[
+Given User is on login page.................................................passed
+When user enters username and password......................................passed
+And clicks on login buttons.................................................passed
+Then User is navigated to home page.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>
