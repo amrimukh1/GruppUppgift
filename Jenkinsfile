@@ -35,13 +35,13 @@ pipeline {
             
           stage('Cucumber Report'){
 		steps{
-	//		// Get some code from a GitHub repository
-    //		checkout([$class: 'GitSCM',
-    //    	branches: [[name: '*/master']],
-    /*    	extensions: [[$class: 'CloneOption', timeout: 120]],
+			// Get some code from a GitHub repository
+    	checkout([$class: 'GitSCM',
+       	branches: [[name: '*/master']],
+        	extensions: [[$class: 'CloneOption', timeout: 120]],
         	gitTool: 'Default', 
         	userRemoteConfigs: [[url: 'https://github.com/amrimukh1/CucumberDemo']]
-			 ]) */
+			 ]) 
 		cucumber buildStatus: 'UNSTABLE',
 		fileIncludePattern: '**/*.json',
                jsonReportDirectory: 'target/JSONReports'}}
