@@ -4,6 +4,7 @@ pipeline {
     tools {
          maven '3.8.6'
         jdk 'JAVA_HOME'
+  }
   
     stages {
 	stage('Checkout code') {
